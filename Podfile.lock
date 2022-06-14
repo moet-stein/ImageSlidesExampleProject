@@ -1,0 +1,22 @@
+PODS:
+  - ImageSlides (1.0.3):
+    - SDWebImage (~> 5.0)
+  - SDWebImage (5.12.6):
+    - SDWebImage/Core (= 5.12.6)
+  - SDWebImage/Core (5.12.6)
+
+DEPENDENCIES:
+  - ImageSlides
+
+SPEC REPOS:
+  trunk:
+    - ImageSlides
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  ImageSlides: 15bb0b704adc82cb9206036d783d08ea2350f858
+  SDWebImage: a47aea9e3d8816015db4e523daff50cfd294499d
+
+PODFILE CHECKSUM: cd92b3e4b98177560fe9634ff195f9778fab436c
+
+COCOAPODS: 1.11.3

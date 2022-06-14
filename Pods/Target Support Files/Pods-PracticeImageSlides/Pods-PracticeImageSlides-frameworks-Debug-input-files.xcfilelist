@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-PracticeImageSlides/Pods-PracticeImageSlides-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ImageSlides/ImageSlides.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3D45A6D66B08F220280833 /* Pods_PracticeImageSlides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E618C4713B671249E3311A4 /* Pods_PracticeImageSlides.framework */; };
 		6058B33128564CBD003E1450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058B33028564CBD003E1450 /* AppDelegate.swift */; };
 		6058B33328564CBD003E1450 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058B33228564CBD003E1450 /* SceneDelegate.swift */; };
-		6058B33528564CBD003E1450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058B33428564CBD003E1450 /* ViewController.swift */; };
-		6058B33828564CBD003E1450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6058B33628564CBD003E1450 /* Main.storyboard */; };
-		6058B33A28564CBE003E1450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6058B33928564CBE003E1450 /* Assets.xcassets */; };
-		6058B33D28564CBE003E1450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6058B33B28564CBE003E1450 /* LaunchScreen.storyboard */; };
+		6058B33528564CBD003E1450 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058B33428564CBD003E1450 /* HomeViewController.swift */; };
+		6058B34C28565175003E1450 /* FilmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058B34B28565175003E1450 /* FilmDataManager.swift */; };
+		6058B34F2856539C003E1450 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058B34E2856539C003E1450 /* Film.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E618C4713B671249E3311A4 /* Pods_PracticeImageSlides.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeImageSlides.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DDDA20DF34D5019378A982D /* Pods-PracticeImageSlides.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeImageSlides.release.xcconfig"; path = "Target Support Files/Pods-PracticeImageSlides/Pods-PracticeImageSlides.release.xcconfig"; sourceTree = "<group>"; };
 		6058B32D28564CBD003E1450 /* PracticeImageSlides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeImageSlides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6058B33028564CBD003E1450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6058B33228564CBD003E1450 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6058B33428564CBD003E1450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6058B33728564CBD003E1450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6058B33428564CBD003E1450 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6058B33928564CBE003E1450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6058B33C28564CBE003E1450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6058B33E28564CBE003E1450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6058B34B28565175003E1450 /* FilmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDataManager.swift; sourceTree = "<group>"; };
+		6058B34E2856539C003E1450 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		9FE3A65EE921B8CB6367EBBD /* Pods-PracticeImageSlides.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeImageSlides.debug.xcconfig"; path = "Target Support Files/Pods-PracticeImageSlides/Pods-PracticeImageSlides.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3D45A6D66B08F220280833 /* Pods_PracticeImageSlides.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				6058B32F28564CBD003E1450 /* PracticeImageSlides */,
 				6058B32E28564CBD003E1450 /* Products */,
+				B13AB622C6D636440EA70135 /* Pods */,
+				754D48695FC22A0D3D78D965 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +63,73 @@
 		6058B32F28564CBD003E1450 /* PracticeImageSlides */ = {
 			isa = PBXGroup;
 			children = (
+				6058B34D28565383003E1450 /* Model */,
+				6058B34A2856515B003E1450 /* Service */,
+				6058B34828565136003E1450 /* View */,
+				6058B34928565143003E1450 /* Controller */,
+				6058B3BF2858BAF5003E1450 /* SupportFiles */,
+			);
+			path = PracticeImageSlides;
+			sourceTree = "<group>";
+		};
+		6058B34828565136003E1450 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6058B34928565143003E1450 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6058B33428564CBD003E1450 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6058B34A2856515B003E1450 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6058B34B28565175003E1450 /* FilmDataManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6058B34D28565383003E1450 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6058B34E2856539C003E1450 /* Film.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6058B3BF2858BAF5003E1450 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
 				6058B33028564CBD003E1450 /* AppDelegate.swift */,
 				6058B33228564CBD003E1450 /* SceneDelegate.swift */,
-				6058B33428564CBD003E1450 /* ViewController.swift */,
-				6058B33628564CBD003E1450 /* Main.storyboard */,
 				6058B33928564CBE003E1450 /* Assets.xcassets */,
 				6058B33B28564CBE003E1450 /* LaunchScreen.storyboard */,
 				6058B33E28564CBE003E1450 /* Info.plist */,
 			);
-			path = PracticeImageSlides;
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		754D48695FC22A0D3D78D965 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E618C4713B671249E3311A4 /* Pods_PracticeImageSlides.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B13AB622C6D636440EA70135 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FE3A65EE921B8CB6367EBBD /* Pods-PracticeImageSlides.debug.xcconfig */,
+				3DDDA20DF34D5019378A982D /* Pods-PracticeImageSlides.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +139,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6058B34128564CBE003E1450 /* Build configuration list for PBXNativeTarget "PracticeImageSlides" */;
 			buildPhases = (
+				76534ADE3EE51D4C64682590 /* [CP] Check Pods Manifest.lock */,
 				6058B32928564CBD003E1450 /* Sources */,
 				6058B32A28564CBD003E1450 /* Frameworks */,
-				6058B32B28564CBD003E1450 /* Resources */,
+				769D20292CF5CB0C98C0FCB5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,41 +186,64 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		6058B32B28564CBD003E1450 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		76534ADE3EE51D4C64682590 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6058B33D28564CBE003E1450 /* LaunchScreen.storyboard in Resources */,
-				6058B33A28564CBE003E1450 /* Assets.xcassets in Resources */,
-				6058B33828564CBD003E1450 /* Main.storyboard in Resources */,
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PracticeImageSlides-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		769D20292CF5CB0C98C0FCB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PracticeImageSlides/Pods-PracticeImageSlides-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PracticeImageSlides/Pods-PracticeImageSlides-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PracticeImageSlides/Pods-PracticeImageSlides-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6058B32928564CBD003E1450 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6058B33528564CBD003E1450 /* ViewController.swift in Sources */,
+				6058B33528564CBD003E1450 /* HomeViewController.swift in Sources */,
 				6058B33128564CBD003E1450 /* AppDelegate.swift in Sources */,
 				6058B33328564CBD003E1450 /* SceneDelegate.swift in Sources */,
+				6058B34C28565175003E1450 /* FilmDataManager.swift in Sources */,
+				6058B34F2856539C003E1450 /* Film.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6058B33628564CBD003E1450 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6058B33728564CBD003E1450 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6058B33B28564CBE003E1450 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,17 +371,21 @@
 		};
 		6058B34228564CBE003E1450 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FE3A65EE921B8CB6367EBBD /* Pods-PracticeImageSlides.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XX56C8Q5GR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PracticeImageSlides",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PracticeImageSlides/Info.plist;
+				INFOPLIST_FILE = PracticeImageSlides/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,17 +403,21 @@
 		};
 		6058B34328564CBE003E1450 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DDDA20DF34D5019378A982D /* Pods-PracticeImageSlides.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XX56C8Q5GR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PracticeImageSlides",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PracticeImageSlides/Info.plist;
+				INFOPLIST_FILE = PracticeImageSlides/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
