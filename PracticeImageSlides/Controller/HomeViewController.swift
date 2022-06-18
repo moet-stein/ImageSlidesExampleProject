@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        filmDataManager.fetchGenericData(urlString: "https://ghibliapi.herokuapp.com/films", type: [Film].self) { [weak self] result in
+        filmDataManager.fetchGenericData(endpoint: GhibliapiEndpoint.getSearchResults, type: [Film].self) { [weak self] result in
             switch result {
             case .success(let films):
                 self?.images = films.map{$0.image}

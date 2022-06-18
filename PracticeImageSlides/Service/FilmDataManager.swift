@@ -13,7 +13,7 @@ enum NetworkError: Error {
 }
 
 protocol NetWorkingProtocol {
-    func fetchGenericData<T: Decodable>(urlString: String, type: T.Type, completion: @escaping (Swift.Result<T, Error>) -> ())
+    func fetchGenericData<T: Decodable>(endpoint: Endpoint?, type: T.Type, completion: @escaping (Swift.Result<T, Error>) -> ())
 }
 
 
@@ -27,30 +27,68 @@ class FilmDataManager: NetWorkingProtocol {
         self.session = urlSession
     }
     
-    func fetchGenericData<T: Decodable>(urlString: String, type: T.Type, completion: @escaping (Swift.Result<T, Error>) -> ()) {
-
-        guard let url = URL(string: urlString)  else {
+    func fetchGenericData<T: Decodable>(endpoint: Endpoint?, type: T.Type, completion: @escaping (Swift.Result<T, Error>) -> ()) {
+        
+        guard let endpoint = endpoint else {
             completion(.failure(NetworkError.badURL))
             return
         }
-
+        
+        var components = URLComponents()
+        components.scheme = endpoint.scheme
+        components.host = endpoint.baseURL
+        components.path = endpoint.path
+        components.queryItems = endpoint.parameters
+        
+        guard let url = components.url else {return}
+        
         var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "GET"
-
-        session.dataTask(with: urlRequest) { data, response, error in
-            guard let data = data, error == nil else {
+        urlRequest.httpMethod = endpoint.method
+        
+        let session = URLSession(configuration: .default)
+        let dataTask = session.dataTask(with: urlRequest) { data, response, error in
+            
+            guard error == nil else {
                 completion(.failure(NetworkError.noDataReturned))
                 return
             }
-
-            do {
-                let obj = try JSONDecoder().decode(T.self, from: data)
-                completion(.success(obj))
-
-            } catch {
-                completion(.failure(error))
-                print("Failed to convert \(error.localizedDescription)")
+            
+            guard response != nil, let data = data else { return }
+            
+            DispatchQueue.main.async {
+                if let responseObject = try? JSONDecoder().decode(T.self, from: data) {
+                    completion(.success(responseObject))
+                } else {
+                    let error = NSError(domain: "", code: 200, userInfo: [NSLocalizedDescriptionKey: "Failed to decode response"])
+                    completion(.failure(error))
+                }
             }
-        }.resume()
+        }
+        
+        dataTask.resume()
+
+//        guard let url = URL(string: urlString)  else {
+//            completion(.failure(NetworkError.badURL))
+//            return
+//        }
+//
+//        var urlRequest = URLRequest(url: url)
+//        urlRequest.httpMethod = "GET"
+//
+//        session.dataTask(with: urlRequest) { data, response, error in
+//            guard let data = data, error == nil else {
+//                completion(.failure(NetworkError.noDataReturned))
+//                return
+//            }
+//
+//            do {
+//                let obj = try JSONDecoder().decode(T.self, from: data)
+//                completion(.success(obj))
+//
+//            } catch {
+//                completion(.failure(error))
+//                print("Failed to convert \(error.localizedDescription)")
+//            }
+//        }.resume()
     }
 }
