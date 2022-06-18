@@ -36,8 +36,6 @@ class FilmDataManager: NetWorkingProtocol {
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
-//        urlRequest.setValue("wordsapiv1.p.rapidapi.com", forHTTPHeaderField: "X-RapidAPI-Host")
-//        urlRequest.setValue(apiKey, forHTTPHeaderField: "X-RapidAPI-Key")
 
         session.dataTask(with: urlRequest) { data, response, error in
             guard let data = data, error == nil else {
